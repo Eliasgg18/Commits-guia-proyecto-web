@@ -55,3 +55,17 @@ Abrir http://localhost:8000 en el navegador.
 - Nombre: Samuel Elias Garcia Cifuentes
 - Programa: Analisis y Desarrollo de Software (ADSO), SENA
 - Repositorio: https://github.com/Eliasgg18/Commits-guia-proyecto-web
+
+## Ejecución local
+
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/Eliasgg18/Commits-guia-proyecto-web.git
+   ```
+2. Entra a la carpeta del proyecto:
+   ```bash
+   cd Commits-guia-proyecto-web
+   ```
+3. Abre `index.html` en tu navegador (doble clic) o usa la extensión **Live Server** de VS Code.
+
+No requiere instalar dependencias: es HTML, CSS y JavaScript puro.
