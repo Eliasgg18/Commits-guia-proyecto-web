@@ -51,6 +51,24 @@ Abrir http://localhost:8000 en el navegador.
 - Despliegue y UX/UI: 15 pts
 - Sustentacion Presencial: 15 pts
 
+## 7. Analisis de Complejidad
+
+| Modulo | Algoritmo | Tiempo | Espacio | Justificacion |
+|---|---|---|---|---|
+| A | `calcularProbabilidadDados` | O(1) | O(1) | Dos ciclos fijos de 6x6 = 36 iteraciones, sin importar la entrada |
+| A | `calcularPartidosTorneo` | O(1) | O(1) | Formula directa C(n,2) = n(n-1)/2 |
+| A | `contarMultiplosMenores` | O(1) | O(1) | Una division entera con `Math.floor`, sin recorrer el rango |
+| A | `calcularViajesMinimos` | O(1) | O(1) | Una division con `Math.ceil` |
+| B | `resolverCuadratica` | O(1) | O(1) | Numero fijo de operaciones aritmeticas (formula estable de Citardauq) |
+| B | `dibujarParabola` | O(k) | O(1) | Recorre k = 120 puntos para trazar la curva (constante en la practica) |
+| C | `analizarSecuencia` | O(n) | O(n) | Recorre el arreglo para razones y diferencias; guarda los arreglos `d1` y `d2` |
+| D | `ejecutarSuiteCompleta` | O(t) | O(t) | Ejecuta t = 10 pruebas y guarda un resultado por cada una |
+
+Notas:
+- n es el tamano de la secuencia ingresada en el Modulo C.
+- Los algoritmos del Modulo A son O(1) porque usan formulas cerradas en lugar de ciclos.
+- `resolverCuadratica` evita la cancelacion catastrofica con `q = -0.5 * (b + sgn(b) * sqrt(delta))`, sin costo extra en complejidad.
+
 ## Autor
 - Nombre: Samuel Elias Garcia Cifuentes
 - Programa: Analisis y Desarrollo de Software (ADSO), SENA
