@@ -60,6 +60,26 @@ function leerEntero(input, nombre, { min = 0 } = {}) {
   return numero;
 }
 
+/**
+ * Lee un input numerico (decimal o negativo) y valida que no este vacio
+ * ni sea NaN / Infinity.
+ */
+function leerDecimal(input, nombre) {
+  const texto = input.value.trim();
+
+  if (texto === "") {
+    throw new Error(`El coeficiente "${nombre}" no puede estar vacío.`);
+  }
+
+  const numero = Number(texto);
+
+  if (!Number.isFinite(numero)) {
+    throw new Error(`El coeficiente "${nombre}" debe ser un número válido.`);
+  }
+
+  return numero;
+}
+
 /* -------------------------------------------------------------
    MODULO A: SIMULADOR BAIRESDEV
 ------------------------------------------------------------- */
@@ -153,9 +173,19 @@ function initModuloB() {
   const canvas = document.getElementById("parabola-canvas");
 
   function resolverYDibujar() {
-    const a = parseFloat(inputA.value);
-    const b = parseFloat(inputB.value);
-    const c = parseFloat(inputC.value);
+   let a, b, c;
+try {
+  a = leerDecimal(inputA, "a");
+  b = leerDecimal(inputB, "b");
+  c = leerDecimal(inputC, "c");
+} catch (e) {
+  outEq.textContent = "—";
+  outDelta.textContent = "N/A";
+  outTipo.textContent = e.message;
+  outVertice.textContent = "N/A";
+  outRaices.textContent = "N/A";
+  return;
+}
 
     // Representacion textual
     const signoB = b >= 0 ? `+ ${b}` : `- ${Math.abs(b)}`;
