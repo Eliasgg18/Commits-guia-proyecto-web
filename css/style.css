@@ -111,6 +111,11 @@ body {
   display: flex;
   overflow-x: auto;
   gap: 0.5rem;
+  scrollbar-width: none; /* Firefox: oculta la barra */
+}
+
+.nav-container::-webkit-scrollbar {
+  display: none; /* Chrome, Edge, Brave: oculta la barra */
 }
 
 .nav-tab {
