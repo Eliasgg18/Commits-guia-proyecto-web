@@ -28,11 +28,18 @@ La aplicacion es estatica y no usa frameworks. Esta separada por responsabilidad
 Los archivos usan modulos ES (import/export), por eso se necesita un servidor HTTP para ejecutarlo en local.
 
 ## 3. Ejecucion Local
-Ejecutar un servidor local HTTP:
-```bash
-python3 -m http.server 8000
-```
-Abrir http://localhost:8000 en el navegador.
+Los archivos usan modulos ES, por lo que no funcionan con doble clic. Opciones:
+
+1. Servidor de Python:
+   ```bash
+   git clone https://github.com/Eliasgg18/Commits-guia-proyecto-web.git
+   cd Commits-guia-proyecto-web
+   python3 -m http.server 8000
+   ```
+   Abrir http://localhost:8000 en el navegador.
+2. Extension **Live Server** de VS Code (clic derecho en `index.html` → Open with Live Server).
+
+No requiere instalar dependencias: es HTML, CSS y JavaScript puro.
 
 ## 4. Desafios de Precision Numerica (Cascaritas)
 1. Cancelacion Catastrofica: Usar formula de Citardauq / Muller cuando b^2 >> 4ac.
@@ -49,7 +56,7 @@ Abrir http://localhost:8000 en el navegador.
 - Superacion de Casos Borde: 25 pts
 - Gestion de Git y Commits: 20 pts
 - Despliegue y UX/UI: 15 pts
-- Sustentacion Presencial: 15 pts
+- Calidad del Codigo y README: 15 pts
 
 ## 7. Analisis de Complejidad
 
@@ -73,17 +80,3 @@ Notas:
 - Nombre: Samuel Elias Garcia Cifuentes
 - Programa: Analisis y Desarrollo de Software (ADSO), SENA
 - Repositorio: https://github.com/Eliasgg18/Commits-guia-proyecto-web
-
-## Ejecución local
-
-1. Clona el repositorio:
-   ```bash
-   git clone https://github.com/Eliasgg18/Commits-guia-proyecto-web.git
-   ```
-2. Entra a la carpeta del proyecto:
-   ```bash
-   cd Commits-guia-proyecto-web
-   ```
-3. Abre `index.html` en tu navegador (doble clic) o usa la extensión **Live Server** de VS Code.
-
-No requiere instalar dependencias: es HTML, CSS y JavaScript puro.
