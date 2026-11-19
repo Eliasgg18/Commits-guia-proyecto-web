@@ -50,3 +50,8 @@ Abrir http://localhost:8000 en el navegador.
 - Gestion de Git y Commits: 20 pts
 - Despliegue y UX/UI: 15 pts
 - Sustentacion Presencial: 15 pts
+
+## Autor
+- Nombre: Samuel Elias Garcia Cifuentes
+- Programa: Analisis y Desarrollo de Software (ADSO), SENA
+- Repositorio: https://github.com/Eliasgg18/Commits-guia-proyecto-web
