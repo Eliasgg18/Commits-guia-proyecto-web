@@ -1,4 +1,5 @@
 # Suite Matematica y Algoritmica (Proyecto Integrador)
+![Build](https://github.com/Eliasgg18/Commits-guia-proyecto-web/actions/workflows/pages/pages-build-deployment/badge.svg)
 
 Evaluacion practica de logica computacional, algebra y precision numerica.
 Proyecto integrador para trabajo en casa con control de versiones en GitHub y despliegue en GitHub Pages.
@@ -17,6 +18,14 @@ Proyecto integrador para trabajo en casa con control de versiones en GitHub y de
 - js/modules/cuadratica.js: Solucionador cuadratico estable.
 - js/modules/secuencias.js: Detector de secuencias.
 - js/modules/test-suite.js: Suite de 10 pruebas unitarias.
+## Arquitectura
+La aplicacion es estatica y no usa frameworks. Esta separada por responsabilidades:
+- Capa de logica (js/modules/): funciones sin acceso al DOM. Cada modulo (bairesdev, cuadratica, secuencias) recibe numeros y devuelve un objeto con el resultado.
+- Capa de interfaz (js/app.js): lee los formularios, llama a los modulos y pinta los resultados y la parabola en Canvas.
+- Capa de pruebas (js/modules/test-suite.js): ejecuta 10 pruebas unitarias en el navegador sobre la capa de logica.
+- Presentacion: index.html (estructura con pestañas) y css/style.css (estilos responsivos).
+
+Los archivos usan modulos ES (import/export), por eso se necesita un servidor HTTP para ejecutarlo en local.
 
 ## 3. Ejecucion Local
 Ejecutar un servidor local HTTP:
