@@ -236,10 +236,11 @@ function dibujarParabola(canvas, a, b, c, res) {
   // Ejes X e Y
   ctx.strokeStyle = "#475569";
   ctx.lineWidth = 1.5;
-  // Eje X
+  // Eje X (y = 0): se desplaza segun la posicion del vertice
+  const ejeYPantalla = originCanvasY + centroY * (scaleY * 0.4);
   ctx.beginPath();
-  ctx.moveTo(0, originCanvasY);
-  ctx.lineTo(W, originCanvasY);
+  ctx.moveTo(0, ejeYPantalla);
+  ctx.lineTo(W, ejeYPantalla);
   ctx.stroke();
   // Eje Y
   ctx.beginPath();
